@@ -29,4 +29,10 @@ def main(argv):
     return
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    # since we only need two strings, if we get more than three arguments
+    # need to stop
+    if len(sys.argv) != 3:
+        print("Wrong number of arguments")
+    else:
+        # pass second and third arguments to main function
+        main(sys.argv[1:])
